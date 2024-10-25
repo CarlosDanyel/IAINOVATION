@@ -14,6 +14,7 @@ export const Display = styled.div`
 
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 12px;
 
     span {
@@ -41,6 +42,16 @@ export const Display = styled.div`
             text-transform: uppercase;
 
             color: #ffffff;
+        }
+    }
+
+    @media (max-width: 924px) {
+        justify-content: center;
+        align-items: center;
+
+        span {
+            flex-direction: column;
+            text-align: center;
         }
     }
 `;

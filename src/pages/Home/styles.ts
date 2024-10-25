@@ -18,6 +18,11 @@ export const Display = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 27px;
+
+    @media (max-width: 1131px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
 `;
 
 export const TextHome = styled(motion.div)`
@@ -82,11 +87,18 @@ export const TextHome = styled(motion.div)`
             transform: translateY(-10%);
         }
     }
+
+    @media (max-width: 1131px) {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 `;
 
 export const ImgHome = styled.div`
     position: relative;
-    margin: 0 40px;
+    display: flex;
+    justify-content: flex-end;
 `;
 
 export const SwiperPage = styled(Swiper)`
@@ -94,13 +106,44 @@ export const SwiperPage = styled(Swiper)`
     right: 0;
     width: 640px;
     height: 738px;
+    margin-right: 2.5rem;
+
     img {
         width: 100%;
         height: 100%;
     }
+
+    @media (max-width: 1405px) {
+        img {
+            width: 85%;
+            height: 100%;
+        }
+
+        @media (max-width: 1269px) {
+            img {
+                width: 75%;
+                height: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 1131px) {
+        inset: 0;
+
+        width: 100%;
+        margin: 0 auto;
+        max-width: 800px;
+
+        img {
+            width: 100%;
+        }
+    }
 `;
 
-export const SwiperSlidePage = styled(SwiperSlide)``;
+export const SwiperSlidePage = styled(SwiperSlide)`
+    display: flex;
+    justify-content: flex-end;
+`;
 
 export const News = styled.section`
     h2 {
@@ -131,6 +174,7 @@ export const List = styled(motion.ul)`
     list-style: none;
 
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
 
     li {
@@ -140,6 +184,8 @@ export const List = styled(motion.ul)`
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        flex-grow: 1;
+        flex-basis: 21rem;
         gap: 16px;
 
         div:has(div) {
