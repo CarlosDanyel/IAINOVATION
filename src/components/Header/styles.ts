@@ -63,6 +63,10 @@ export const Navbar = styled.div`
         }
     }
 
+    button {
+        display: none;
+    }
+
     .active {
         color: #ffbb00;
 
@@ -73,6 +77,19 @@ export const Navbar = styled.div`
 
         &:hover {
             color: #ab7f04 !important;
+        }
+    }
+
+    @media (max-width: 777px) {
+        a {
+            display: none;
+        }
+
+        button {
+            display: flex;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
         }
     }
 `;

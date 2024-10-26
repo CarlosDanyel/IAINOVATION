@@ -92,6 +92,7 @@ export const TextHome = styled(motion.div)`
         align-items: center;
         justify-content: center;
         text-align: center;
+        padding: 136px 0 28px 0;
     }
 `;
 
@@ -105,7 +106,7 @@ export const SwiperPage = styled(Swiper)`
     position: absolute;
     right: 0;
     width: 640px;
-    height: 738px;
+    height: 775px;
     margin-right: 2.5rem;
 
     img {
@@ -114,16 +115,11 @@ export const SwiperPage = styled(Swiper)`
     }
 
     @media (max-width: 1405px) {
-        img {
-            width: 85%;
-            height: 100%;
-        }
+        width: 90%;
 
-        @media (max-width: 1269px) {
-            img {
-                width: 75%;
-                height: 100%;
-            }
+        @media (max-width: 1293px) {
+            height: 850px;
+            width: 90%;
         }
     }
 
@@ -131,11 +127,20 @@ export const SwiperPage = styled(Swiper)`
         inset: 0;
 
         width: 100%;
+        height: 700px;
         margin: 0 auto;
         max-width: 800px;
 
         img {
             width: 100%;
+        }
+
+        @media (max-width: 671px) {
+            height: 750px;
+
+            @media (max-width: 611px) {
+                height: 840px;
+            }
         }
     }
 `;

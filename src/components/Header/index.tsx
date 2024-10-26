@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Container, Display, Logo, Navbar } from "./styles";
 import LogoMarca from "../../assets/logo.png";
+import { List } from "phosphor-react";
 
 export const Header = () => {
     return (
@@ -15,6 +16,9 @@ export const Header = () => {
                     <NavLink to={"/contents"}>Contents</NavLink>
                     <NavLink to={"/events"}>Events</NavLink>
                     <NavLink to={"/contact"}>Contact</NavLink>
+                    <button type="button">
+                        <List size={42} color="#ffffff" />
+                    </button>
                 </Navbar>
             </Display>
         </Container>
